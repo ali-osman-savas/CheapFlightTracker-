@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:16
+    container_name: ucuzgider-postgres
+    environment:
+      POSTGRES_DB: ucuzgider
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
