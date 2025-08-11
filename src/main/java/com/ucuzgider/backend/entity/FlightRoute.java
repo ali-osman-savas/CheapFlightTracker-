@@ -6,7 +6,10 @@ import lombok.*;
 @Entity
 @Table(name = "flight_routes",
        uniqueConstraints = @UniqueConstraint(columnNames = {"origin", "destination"}))
-@Data @NoArgsConstructor @AllArgsConstructor @Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class FlightRoute extends BaseEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

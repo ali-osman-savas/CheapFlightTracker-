@@ -9,7 +9,10 @@ import java.time.LocalDate;
 @Table(name = "flight_prices",
        uniqueConstraints = @UniqueConstraint(columnNames = {"route_id","departure_date","provider"}),
        indexes = @Index(name = "idx_prices_route_date_price", columnList = "route_id, departure_date, price"))
-@Data @NoArgsConstructor @AllArgsConstructor @Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class FlightPrice extends BaseEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

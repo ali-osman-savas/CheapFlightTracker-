@@ -7,7 +7,10 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "flight_search_logs")
-@Data @NoArgsConstructor @AllArgsConstructor @Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class FlightSearchLog extends BaseEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

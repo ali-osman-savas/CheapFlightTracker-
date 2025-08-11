@@ -8,7 +8,10 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "price_alerts")
-@Data @NoArgsConstructor @AllArgsConstructor @Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class PriceAlert extends BaseEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -5,7 +5,10 @@ import lombok.*;
 
 @Entity
 @Table(name = "flight_providers")
-@Data @NoArgsConstructor @AllArgsConstructor @Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class FlightProvider extends BaseEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

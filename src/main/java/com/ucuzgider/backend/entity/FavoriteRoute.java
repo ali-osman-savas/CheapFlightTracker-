@@ -6,7 +6,10 @@ import lombok.*;
 @Entity
 @Table(name = "favorite_routes",
        uniqueConstraints = @UniqueConstraint(columnNames = {"user_id","route_id"}))
-@Data @NoArgsConstructor @AllArgsConstructor @Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class FavoriteRoute extends BaseEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
