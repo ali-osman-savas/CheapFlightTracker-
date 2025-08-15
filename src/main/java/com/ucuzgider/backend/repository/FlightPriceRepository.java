@@ -2,7 +2,6 @@ package com.ucuzgider.backend.repository;
 
 import com.ucuzgider.backend.entity.FlightPrice;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
@@ -10,7 +9,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
-public interface FlightPriceRepository extends JpaRepository<FlightPrice, Long> {
+public interface FlightPriceRepository extends BaseRepository<FlightPrice, Long> {
 
     @Query("""
       SELECT fp FROM FlightPrice fp
